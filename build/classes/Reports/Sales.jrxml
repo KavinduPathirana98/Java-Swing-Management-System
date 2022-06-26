@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="da6a197c-6ab5-4fb2-a924-47e4b72d9c4c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="txt_from_date" class="java.lang.String"/>
+	<parameter name="txt_to_date" class="java.lang.String"/>
+	<field name="Item_Name" class="java.lang.String"/>
+	<field name="Sold_quantity" class="java.lang.String"/>
+	<field name="Date" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="-20" y="0" width="596" height="79" forecolor="#FFFFFF" backcolor="#3366FF" uuid="c1c3553c-aac9-410b-8531-19608c9c668d"/>
+				<textElement textAlignment="Center">
+					<font size="40" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SALES REPORT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="75" splitType="Stretch">
+			<textField>
+				<reportElement x="224" y="16" width="67" height="20" uuid="7955f318-5f3e-4932-b30c-112e627b6258"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{txt_from_date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="68" y="16" width="146" height="20" uuid="55848188-cf4c-4d99-b17a-6d2d4814c302"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SALES REPORT FROM    ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="16" width="24" height="20" uuid="5fdf9231-0e4f-4032-bc2a-6e6517d6a3aa"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="355" y="16" width="100" height="20" uuid="f5c05d81-e681-4891-b376-4de2ffe8b0fd"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{txt_to_date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="54" y="50" width="435" height="20" uuid="84836497-3daa-4910-a77a-238c2f204196"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="20" uuid="d6e6cd3c-1179-460d-a05f-7806601e6040"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="0" width="185" height="20" uuid="ef9d161a-3e5c-44ee-ad38-3ada0586b9c9"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sold Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="389" y="0" width="66" height="20" uuid="7b90204e-f0c4-4a22-947f-689079e6e279"/>
+				<textElement textAlignment="Right">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="185" height="20" uuid="3123065b-b3c8-43e2-9d1d-3c3bdfb52a5f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="0" width="106" height="20" uuid="8c013854-e89a-4613-9b59-fc190902de30"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Sold_quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="142" height="20" uuid="86dcca9a-5380-40cf-ade2-b51a573814f5"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="14" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="15" splitType="Stretch"/>
+	</summary>
+</jasperReport>
